@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "@/app/shared/home/heroSection";
 import AboutUsSection from "@/app/shared/home/aboutUsSection";
 
