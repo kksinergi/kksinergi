@@ -3,10 +3,9 @@
 @theme {
     --color-buttonSecondary: #1E1E1E;
     --color-description: #333333;
+
     --color-primary: #0061FF;
     --color-secondary: #FFCF4A;
-    --color-tertiary: #FF5500;
-    --color-tertiary2: #00A95D;
 
     --bg-primary: #F7FAFF;
 }
