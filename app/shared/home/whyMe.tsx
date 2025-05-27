@@ -1,7 +1,5 @@
 "use client";
 
-// import { whyMeItems } from "@/app/utils/whyMe";
-
 export default function WhyMeSection() {
   return (
     <section id="whyme" className=" font-[family-name:var(--font-geist-sans)">
