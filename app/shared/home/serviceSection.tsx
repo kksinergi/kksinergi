@@ -19,7 +19,7 @@ export default function ServiceSection() {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center max-w-[1244px] h-full gap-10">
-          {serviceItems.slice(0, 3).map((item, index) => (
+          {serviceItems.slice(0, 3).map((item) => (
             <div
               key={item.title}
               className={`w-full h-full flex flex-col sm:flex-row lg:flex-col items-start justify-center gap-4 bg-[#F7FAFF] rounded-3xl drop-shadow-sm p-6`}
