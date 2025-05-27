@@ -24,11 +24,11 @@ export default function ServiceSection() {
               key={item.title}
               className={`w-full h-full flex flex-col sm:flex-row lg:flex-col items-start justify-center gap-4 bg-[#F7FAFF] rounded-3xl drop-shadow-sm p-6`}
             >
-              <div className="flex items-center justify-center h-[50px] w-[50px] mx-auto sm:mx-0 sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
+              <div className="flex items-center justify-center h-[40px] w-[40px] mx-auto sm:mx-0 sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
                 <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
               </div>
               <div className="flex flex-col w-full h-fit gap-2">
-                <h3 className="text-2xl text-center sm:text-left font-bold">{item.title}</h3>
+                <h3 className="text-base sm:text-2xl text-center sm:text-left font-bold">{item.title}</h3>
                 <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{item.description}</p>
               </div>
             </div>
@@ -40,11 +40,11 @@ export default function ServiceSection() {
               key={item.title}
               className={`lg:max-w-[388px] h-full flex flex-col sm:flex-row lg:flex-col items-start justify-center gap-4 bg-[#F7FAFF] rounded-3xl drop-shadow-sm p-6`}
             >
-              <div className="flex items-center justify-center h-[50px] w-[50px] mx-auto sm:mx-0 sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
+              <div className="flex items-center justify-center h-[40px] w-[40px] mx-auto sm:mx-0 sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
                 <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
               </div>
               <div className="flex flex-col w-full h-fit gap-2">
-                <h3 className="text-2xl text-center sm:text-left font-bold">{item.title}</h3>
+                <h3 className="text-base sm:text-2xl text-center sm:text-left font-bold">{item.title}</h3>
                 <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{item.description}</p>
               </div>
             </div>

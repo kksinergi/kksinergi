@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between py-4 px-8 bg-transparent text-black font-[family-name:var(--font-geist-sans)]">
       <Link href="/" className="flex items-center w-[180px] h-[50px] md:w-[200px] md:h-[50px]">
-        <img src="/logo.png" alt="Logo" />
+        <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/logo.png')" }}></div>
       </Link>
 
       <ul className="hidden lg:flex space-x-4">
