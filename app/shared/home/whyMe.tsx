@@ -1,11 +1,11 @@
 "use client";
 
-// import { whyMeItems } from "@/app/utils/whyMe";
+import { whyMeItems } from "@/app/utils/whyMe";
 
 export default function WhyMeSection() {
   return (
-    <section id="whyme" className=" font-[family-name:var(--font-geist-sans)">
-      <div className="flex flex-col items-center justify-center px-8 py-32 h-full">
+    <section id="whyme" className="font-[family-name:var(--font-geist-sans)]">
+      <div className=" flex flex-col items-center justify-center px-8 py-32 gap-10 h-full">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
           <div className="flex flex-col h-full gap-3">
             <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
@@ -24,6 +24,21 @@ export default function WhyMeSection() {
           </div>
           <div className="relative block w-full">
             <div className="w-full h-full bg-contain bg-no-repeat bg-center min-h-[232px] md:h-[490px]" style={{ backgroundImage: "url('/whyme-img.png')" }}></div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full gap-6">
+          <h1 className="font-bold w-full text-center sm:text-left text-[24px] sm:text-[28px] xl:text-[32px] text-(--color-description)">Cara Kami Bekerja</h1>
+          <div className="grid grid-cols-2 items-center justify-center w-full gap-6">
+            {whyMeItems.map((item) => (
+              <div key={item.id} className="w-full h-full flex flex-col sm:flex-row sm:items-start items-center justify-center gap-4 bg-transparent border-[#D4D4D4] border rounded-2xl p-4 sm:p-6">
+                <div className="flex items-center justify-center h-[40px] w-[40px] sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
+                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
+                </div>
+                <div className="flex flex-col w-full h-fit gap-2">
+                  <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

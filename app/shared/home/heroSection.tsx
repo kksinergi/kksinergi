@@ -2,7 +2,7 @@
 
 export default function HeroSection() {
   return (
-    <section id="home" className=" font-[family-name:var(--font-geist-sans) overflow-hidden">
+    <section id="home" className={`font-[family-name:var(--font-geist-sans)] overflow-hidden`}>
       <div className="flex items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8 xl:px-0" style={{ backgroundImage: "url('/hero-bg.png')" }}>
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:justify-between max-w-[1207px]">
           <div className="flex flex-col items-center justify-center gap-10">

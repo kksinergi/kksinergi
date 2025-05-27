@@ -4,7 +4,7 @@ import {serviceItems} from "@/app/utils/service";
 
 export default function ServiceSection() {
   return (
-    <section id="tentangkami2" className=" font-[family-name:var(--font-geist-sans)">
+    <section id="tentangkami2" className=" font-[family-name:var(--font-geist-sans)]">
       <div className="flex flex-col gap-10 items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8" style={{ backgroundImage: "url('/about-bg.png')" }}>
         <div className="flex flex-col max-w-[850px] gap-3">
           <div className="flex flex-row items-center justify-center gap-3">
@@ -51,7 +51,7 @@ export default function ServiceSection() {
           ))}
         </div>
         <div className="flex items-center justify-center w-full h-full select-none">
-          <button className="bg-(--color-primary) text-white text-base sm:text-xl text-center py-3 px-6 rounded-[20px] font-bold hover:bg-(--color-primary) hover:opacity-80">Lihat Detail Layanan</button>
+          <button className="bg-(--color-primary) text-white text-base sm:text-xl text-center py-3 px-6 rounded-[20px] font-bold hover:bg-(--color-primary) hover:opacity-80 cursor-pointer">Lihat Detail Layanan</button>
         </div>
       </div>
     </section>
