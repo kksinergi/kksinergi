@@ -1,6 +1,6 @@
 "use client";
 
-import { whyMeItems } from "@/app/utils/whyMe";
+// import { whyMeItems } from "@/app/utils/whyMe";
 
 export default function WhyMeSection() {
   return (
