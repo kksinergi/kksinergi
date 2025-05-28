@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section id="home" className={`font-[family-name:var(--font-geist-sans)]`}>
       <div className="flex flex-col gap-10 items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8" style={{ backgroundImage: "url('/hero-bg.png')" }}>
-        <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:justify-between">
+        <div className="flex w-full flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:justify-between">
           <div className="flex flex-col items-center justify-center gap-10">
             <div className="flex flex-col gap-3">
               <div className="flex flex-row items-center justify-center lg:justify-start sm:w-full gap-3">

@@ -6,7 +6,7 @@ export default function WhyMeSection() {
   return (
     <section id="whyme" className="font-[family-name:var(--font-geist-sans)]">
       <div className=" flex flex-col items-center justify-center px-8 py-32 gap-10 h-full">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
           <div className="flex flex-col h-full gap-3">
             <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
               <div className="w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px] bg-cover bg-center" style={{ backgroundImage: "url('/badge4.png')" }}></div>
@@ -23,7 +23,7 @@ export default function WhyMeSection() {
             </div>
           </div>
           <div className="relative block w-full">
-            <div className="w-full h-full bg-contain bg-no-repeat bg-center min-h-[232px] md:h-[490px]" style={{ backgroundImage: "url('/whyme-img.png')" }}></div>
+            <div className="w-full h-full bg-contain bg-no-repeat bg-center lg:bg-right min-h-[232px] md:h-[490px]" style={{ backgroundImage: "url('/whyme-img.png')" }}></div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-full gap-6">

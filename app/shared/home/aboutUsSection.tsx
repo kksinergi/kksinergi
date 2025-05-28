@@ -5,9 +5,9 @@ import { aboutItems } from "@/app/utils/aboutUs";
 export default function AboutUsSection() {
   return (
     <section id="tentangkami" className=" font-[family-name:var(--font-geist-sans)]">
-      <div className="flex flex-col px-8 py-32 h-full gap-20">
+      <div className="flex flex-col items-start px-8 py-32 h-full gap-20">
         <div className="flex flex-col-reverse lg:flex-row w-full gap-4 md:gap-10 xl:gap-14">
-          <div className="block w-full min-h-[232px] bg-contain bg-no-repeat xl:h-[444px] md:rounded-2xl md:bg-contain lg:bg-no-repeat bg-center" style={{ backgroundImage: "url('/aboutUs.png')" }}></div>
+          <div className="block lg:bg-left w-full min-h-[232px] bg-contain bg-no-repeat xl:h-[444px] md:rounded-2xl md:bg-contain lg:bg-no-repeat bg-center" style={{ backgroundImage: "url('/aboutUs.png')" }}></div>
           <div className="flex flex-col items-center justify-center w-full h-fit gap-3">
             <div className="flex flex-row items-center justify-center lg:justify-start sm:w-full gap-3">
               <div className="w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px] bg-cover bg-center" style={{ backgroundImage: "url('/badge2.png')" }}></div>
