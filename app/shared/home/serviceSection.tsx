@@ -50,7 +50,7 @@ export default function ServiceSection() {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center w-full h-full select-none">
+        <div className="flex items-center justify-center w-full h-full">
           <button className="bg-(--color-primary) text-white text-base sm:text-xl text-center py-3 px-6 rounded-[20px] font-bold hover:bg-(--color-primary) hover:opacity-80 cursor-pointer">Lihat Detail Layanan</button>
         </div>
       </div>
