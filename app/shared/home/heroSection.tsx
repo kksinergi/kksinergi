@@ -2,9 +2,9 @@
 
 export default function HeroSection() {
   return (
-    <section id="home" className={`font-[family-name:var(--font-geist-sans)] overflow-hidden`}>
-      <div className="flex items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8 xl:px-0" style={{ backgroundImage: "url('/hero-bg.png')" }}>
-        <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:justify-between max-w-[1207px]">
+    <section id="home" className={`font-[family-name:var(--font-geist-sans)]`}>
+      <div className="flex flex-col gap-10 items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8" style={{ backgroundImage: "url('/hero-bg.png')" }}>
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:justify-between">
           <div className="flex flex-col items-center justify-center gap-10">
             <div className="flex flex-col gap-3">
               <div className="flex flex-row items-center justify-center lg:justify-start sm:w-full gap-3">
@@ -23,7 +23,7 @@ export default function HeroSection() {
               <button className="px-6 py-4 text-center bg-transparent text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer underline text-[14px] xl:text-[20px]">Lihat Layanan Kami</button>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center w-full">
+          <div className="flex flex-col items-center lg:items-end justify-center w-full">
             <div
               className="flex flex-col items-center justify-center h-[372px] w-full bg-no-repeat bg-contain sm:bg-repeat sm:w-[317px] md:bg-contain lg:w-[468px] lg:h-[556px] lg:bg-cover bg-center"
               style={{ backgroundImage: "url('/hero-img.png')" }}
