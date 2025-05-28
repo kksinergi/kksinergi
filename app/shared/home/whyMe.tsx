@@ -41,6 +41,23 @@ export default function WhyMeSection() {
             ))}
           </div>
         </div>
+        <div className="relative block w-full h-full overflow-hidden">
+          <div className="w-full h-full bg-cover bg-center rounded-3xl drop-shadow-sm overflow-hidden" style={{ backgroundImage: "url('/whyme-img-organisasi.png')" }}>
+            <div className="block bg-[#0061FF]/70 w-full h-full">
+              <div className="flex flex-col items-center justify-center w-full h-full py-8 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-72 gap-4">
+                <div className="flex flex-col items-center justify-center w-full h-full gap-4">
+                  <h1 className="font-bold text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-[32px]">Lihat Susunan Tim Profesional Kami!</h1>
+                  <p className="text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl mt-2">
+                    Kenali susunan tim kerja kami yang terstruktur dan Lihat bagaimana peran dan kolaborasi tim kami untuk mendukung solusi terbaik untuk Anda
+                  </p>
+                </div>
+                <div className="flex items-center justify-center w-full">
+                  <button className="flex px-4 py-2 sm:px-6 sm:py-4 bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px] text-center">Lihat Susuan Organisasi</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
