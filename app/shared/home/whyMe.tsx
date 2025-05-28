@@ -31,10 +31,10 @@ export default function WhyMeSection() {
           <div className="grid grid-cols-2 items-center justify-center w-full gap-6">
             {whyMeItems.map((item) => (
               <div key={item.id} className="w-full h-full flex flex-col sm:flex-row sm:items-start items-center justify-center gap-4 bg-transparent border-[#D4D4D4] border rounded-2xl p-4 sm:p-6">
-                <div className="flex items-center justify-center h-[40px] w-[40px] sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
+                <div className="flex items-center justify-center h-[55px] w-[40px] sm:h-[40px] sm:w-[55px] md:h-[50px] md:w-[65px] lg:h-[60px] lg:w-[75px] xl:h-[70px] xl:w-[80px]">
                   <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
                 </div>
-                <div className="flex flex-col w-full h-fit gap-2">
+                <div className="flex flex-col w-full h-full gap-2">
                   <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{item.description}</p>
                 </div>
               </div>
