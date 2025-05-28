@@ -5,7 +5,7 @@ import WhyMeSection from "./shared/home/whyMe";
 
 export default function Home() {
   return (
-    <main id="home" className="font-[family-name:var(--font-geist-sans)">
+    <main>
       <HeroSection />
       <AboutUsSection />
       <ServiceSection />

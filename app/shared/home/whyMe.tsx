@@ -43,7 +43,7 @@ export default function WhyMeSection() {
         </div>
         <div className="relative block w-full h-full overflow-hidden">
           <div className="w-full h-full bg-cover bg-center rounded-3xl drop-shadow-sm overflow-hidden" style={{ backgroundImage: "url('/whyme-img-organisasi.png')" }}>
-            <div className="block bg-[#0061FF]/70 w-full h-full">
+            <div className="block bg-[#0443AC]/70 w-full h-full">
               <div className="flex flex-col items-center justify-center w-full h-full py-8 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-72 gap-4">
                 <div className="flex flex-col items-center justify-center w-full h-full gap-4">
                   <h1 className="font-bold text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-[32px]">Lihat Susunan Tim Profesional Kami!</h1>
