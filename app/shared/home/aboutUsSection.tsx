@@ -28,7 +28,7 @@ export default function AboutUsSection() {
               <div className="flex items-center justify-center h-[40px] w-[40px] sm:h-[50px] sm:w-[60px] xl:h-[60px] xl:w-[70px]">
                 <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
               </div>
-              <div className="flex flex-col w-full h-fit gap-2">
+              <div className="flex flex-col w-full h-full gap-2">
                 <h3 className="text-2xl sm:text-left text-center lg:text-left font-semibold" style={{ color: item.color }}>
                   {item.title}
                 </h3>
