@@ -18,7 +18,7 @@ export const whyMeItems: whyMeItem[] = [
   {
     id: 3,
     description: "Membantu klien menemukan peluang, mengatasi tantangan, dan mengoptimalkan kinerja.",
-    icon: "/badge4.4.png",
+    icon: "/badge4.3.png",
   },
   {
     id: 4,
