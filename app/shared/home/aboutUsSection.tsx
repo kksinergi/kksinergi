@@ -25,8 +25,8 @@ export default function AboutUsSection() {
         <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full gap-10">
           {aboutItems.map((item) => (
             <div key={item.title} className="w-full h-full flex flex-col sm:flex-row sm:items-start items-center justify-center gap-4 bg-transparent p-6">
-              <div className="flex items-center justify-center h-[40px] w-[40px] sm:h-[50px] sm:w-[60px] xl:h-[60px] xl:w-[70px]">
-                <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
+              <div className="flex items-center justify-center aspect-square min-w-[40px] sm:min-w-[60px] xl:min-w-[70px] h-[40px] sm:h-[50px] xl:h-[60px]">
+                <div className="w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }} />
               </div>
               <div className="flex flex-col w-full h-full gap-2">
                 <h3 className="text-2xl sm:text-left text-center lg:text-left font-semibold" style={{ color: item.color }}>
