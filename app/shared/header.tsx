@@ -2,11 +2,15 @@
 import { usePathname } from "next/navigation";
 import Navbar from "@/app/components/navbar";
 
+const page = [
+  "/layanan"
+]
+
 export default function Header() {
   const pathname = usePathname();
   console.log(pathname);
 
-  if (pathname === "/layanan") {
+  if (page.includes(pathname)) {
     return (
       <header className="select-none bg-transparent">
         <Navbar />

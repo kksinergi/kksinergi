@@ -1,6 +1,7 @@
 "use client";
 
 import { whyMeItems } from "@/app/utils/whyMe";
+import Link from "next/link";
 
 export default function WhyMeSection() {
   return (
@@ -51,9 +52,9 @@ export default function WhyMeSection() {
                     Kenali susunan tim kerja kami yang terstruktur dan Lihat bagaimana peran dan kolaborasi tim kami untuk mendukung solusi terbaik untuk Anda
                   </p>
                 </div>
-                <div className="flex items-center justify-center w-full">
+                <Link href="/team" className="flex items-center justify-center h-full">
                   <button className="flex px-4 py-2 sm:px-6 sm:py-4 bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px] text-center">Lihat Susuan Organisasi</button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

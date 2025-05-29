@@ -1,6 +1,7 @@
 '"use client";';
 
 import { serviceHomeItems } from "@/app/utils/service";
+import Link from "next/link";
 
 export default function ServiceSection() {
   return (
@@ -44,9 +45,9 @@ export default function ServiceSection() {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center w-full h-full">
+        <Link href="/layanan" className="flex items-center justify-center h-full">
           <button className="bg-(--color-primary) text-white text-base sm:text-xl text-center py-3 px-6 rounded-[20px] font-bold hover:bg-(--color-primary) hover:opacity-80 cursor-pointer">Lihat Detail Layanan</button>
-        </div>
+        </Link>
       </div>
     </section>
   );
