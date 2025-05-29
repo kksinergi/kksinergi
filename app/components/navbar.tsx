@@ -36,11 +36,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between py-4 px-8 bg-transparent text-black">
+    <nav className="flex items-center bg-white justify-between py-4 px-8 text-black">
       <Link href="/" className="flex items-center w-[180px] h-[50px] md:w-[200px] md:h-[50px]">
         <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/logo.png')" }}></div>
       </Link>
-
       <ul className="hidden lg:flex space-x-4">
         {navbarItems.map((item) => (
           <li key={item.name} className="flex items-center group">

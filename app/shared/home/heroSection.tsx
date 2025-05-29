@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <section id="home" className={`font-[family-name:var(--font-geist-sans)]`}>
@@ -20,7 +22,7 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col sm:w-full sm:flex-row sm:justify-center gap-10">
               <button className="px-6 py-4 text-center bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px]">Konsultasi Sekarang</button>
-              <button className="px-6 py-4 text-center bg-transparent text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer underline text-[14px] xl:text-[20px]">Lihat Layanan Kami</button>
+              <Link href="#layanan" className="px-6 py-4 text-center bg-transparent text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer underline text-[14px] xl:text-[20px]">Lihat Layanan Kami</Link>
             </div>
           </div>
           <div className="flex flex-col items-center lg:items-end justify-center w-full">

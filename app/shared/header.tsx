@@ -10,14 +10,14 @@ export default function Header() {
   const pathname = usePathname();
   if (page.includes(pathname)) {
     return (
-      <header className="select-none bg-transparent">
+      <header className="select-none fixed w-full z-50">
         <Navbar />
       </header>
     );
   }
 
   return (
-    <header className="select-none absolute w-full z-50">
+    <header className="select-none fixed w-full z-50">
       <Navbar />
     </header>
   );

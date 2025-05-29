@@ -53,7 +53,7 @@ export default function WhyMeSection() {
                   </p>
                 </div>
                 <Link href="/team" className="flex items-center justify-center h-full">
-                  <button className="flex px-4 py-2 sm:px-6 sm:py-4 bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px] text-center">Lihat Susuan Organisasi</button>
+                  <button className="flex px-4 py-2 sm:px-6 sm:py-4 bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px] text-center">Lihat Susuan Tim</button>
                 </Link>
               </div>
             </div>

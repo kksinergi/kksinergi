@@ -4,7 +4,7 @@ import { servicePageItems } from "@/app/utils/service";
 
 export default function LayananSection() {
   return (
-    <section className="font-[family-name:var(--font-geist-sans)] bg-white py-[40px] xl:pt-[60px] pb-[100px]">
+    <section className="font-[family-name:var(--font-geist-sans)] bg-white py-32 sm:py-36 xl:py-40">
       <div className="flex flex-col items-center justify-center px-8 mb-[60px]">
         <div className="flex flex-col items-center justify-center w-full h-full gap-2">
           <h1 className="font-semibold text-center text-[32px] sm:text-4xl md:text-5xl lg:text-6xl">Maksimalkan Kinerja dan Kepatuhan Bisnis Anda Bersama Kami</h1>

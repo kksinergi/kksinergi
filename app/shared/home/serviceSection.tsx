@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ServiceSection() {
   return (
-    <section id="tentangkami2" className=" font-[family-name:var(--font-geist-sans)]">
+    <section id="layanan" className=" font-[family-name:var(--font-geist-sans)]">
       <div className="flex flex-col gap-10 items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8" style={{ backgroundImage: "url('/about-bg.png')" }}>
         <div className="flex flex-col max-w-[850px] gap-3">
           <div className="flex flex-row items-center justify-center gap-3">
