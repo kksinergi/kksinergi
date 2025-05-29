@@ -15,7 +15,7 @@ function FooterContent() {
               <div className="flex flex-col w-full gap-4">
                 <h2 className="font-bold text-center sm:text-left text-[32px] sm:text-4xl md:text-5xl lg:text-6xl max-w-[689px]">Siap berkolaborasi untuk solusi terbaik?</h2>
                 <div className="flex justify-center sm:justify-start">
-                  <button className="px-4 py-3 md:px-6 md:py-4 text-(--color-buttonSecondary) text-sm lg:text-lg xl:text-xl bg-(--color-secondary) rounded-[14px] sm:rounded-[20px] font-semibold hover:bg-[#EBB92F]">
+                  <button className="px-4 py-3 md:px-6 md:py-4 text-(--color-buttonSecondary) text-sm lg:text-lg xl:text-xl bg-(--color-secondary) rounded-[14px] sm:rounded-[20px] font-semibold hover:bg-[#EBB92F] cursor-pointer">
                     Hubungi Kami dan Atur Jadwal Konsultasi
                   </button>
                 </div>
@@ -33,7 +33,7 @@ function FooterContent() {
                   <div className="flex flex-col pb-0 sm:flex-row gap-8 lg:gap-4 xl:gap-60">
                     <div className="flex flex-col gap-4">
                       <h2 className="text-xl sm:text-[20px] md:text-[24px] lg:text-[32px] font-bold">Siap Berkolaborasi Untuk Solusi Terbaik Bersama Kami?</h2>
-                      <button className="px-4 py-3 md:px-6 md:py-4 sm:mr-20 text-(--color-buttonSecondary) text-sm lg:text-lg xl:text-xl bg-(--color-secondary) rounded-[14px] sm:rounded-[20px] font-semibold hover:bg-[#EBB92F]">
+                      <button className="px-4 py-3 md:px-6 md:py-4 sm:mr-20 text-(--color-buttonSecondary) text-sm lg:text-lg xl:text-xl bg-(--color-secondary) rounded-[14px] sm:rounded-[20px] font-semibold hover:bg-[#EBB92F] cursor-pointer">
                         Hubungi Kami dan Atur Jadwal Konsultasi
                       </button>
                     </div>
