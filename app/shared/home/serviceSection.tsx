@@ -1,6 +1,6 @@
-'"use client";'
+'"use client";';
 
-import {serviceItems} from "@/app/utils/service";
+import { serviceHomeItems } from "@/app/utils/service";
 
 export default function ServiceSection() {
   return (
@@ -19,7 +19,7 @@ export default function ServiceSection() {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center max-w-[1244px] h-full gap-10">
-          {serviceItems.slice(0, 3).map((item) => (
+          {serviceHomeItems.slice(0, 3).map((item) => (
             <div key={item.title} className={`w-full h-full flex flex-col sm:flex-row lg:flex-col items-start justify-center gap-4 bg-[#F7FAFF] rounded-3xl drop-shadow-sm p-6`}>
               <div className="flex items-center justify-center h-[40px] w-[40px] mx-auto sm:mx-0 sm:h-[55px] sm:w-[60px] md:h-[65px] md:w-[70px] lg:h-[70px] lg:w-[70px]">
                 <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${item.icon})` }}></div>
@@ -32,7 +32,7 @@ export default function ServiceSection() {
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center max-w-[1244px] h-full gap-10">
-          {serviceItems.slice(3).map((item) => (
+          {serviceHomeItems.slice(3).map((item) => (
             <div key={item.title} className={`lg:max-w-[388px] h-full flex flex-col sm:flex-row lg:flex-col items-start justify-center gap-4 bg-[#F7FAFF] rounded-3xl drop-shadow-sm p-6`}>
               <div className="flex items-center justify-center aspect-square min-w-[40px] sm:min-w-[60px] md:min-w-[70px] lg:min-w-[70px] h-[40px] sm:h-[55px] md:h-[65px] lg:h-[70px] mx-auto sm:mx-0">
                 <div className="w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }} />
