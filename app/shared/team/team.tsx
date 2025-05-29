@@ -1,7 +1,4 @@
 "use client";
-
-import { servicePageItems } from "@/app/utils/service";
-
 export default function TeamSection() {
   return (
     <section className="font-[family-name:var(--font-geist-sans)] bg-white">
