@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Kapita Konsul Sinergi",
     images: [
       {
-        url: "https://kapita-konsul-sinergi.vercel.app/logo.png",
+        url: "https://kapita-konsul-sinergi.vercel.app/og-img.jpg",
         width: 1200,
         height: 630,
         alt: "PT. Kapita Konsul Sinergi",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PT. Kapita Konsul Sinergi",
     description: "Konsultan teknik, K3, dan lingkungan terbaik untuk industri Anda.",
-    images: ["https://kapita-konsul-sinergi.vercel.app/logo.png"],
+    images: ["https://kapita-konsul-sinergi.vercel.app/og-img.jpg"],
     creator: "@kapitakonsul", // Ganti jika punya akun Twitter resmi
   },
 };
