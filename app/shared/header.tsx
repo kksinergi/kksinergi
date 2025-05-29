@@ -8,8 +8,6 @@ const page = [
 
 export default function Header() {
   const pathname = usePathname();
-  console.log(pathname);
-
   if (page.includes(pathname)) {
     return (
       <header className="select-none bg-transparent">
