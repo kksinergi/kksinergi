@@ -4,7 +4,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
+function FooterContent() {
   const pathname = usePathname();
   return (
     <footer id="Kontak" className="mb-[87px] font-[family-name:var(--font-geist-sans)] overflow-hidden">
@@ -63,4 +63,9 @@ export default function Header() {
       )}
     </footer>
   );
+}
+
+export default function Footer() {
+  const pathname = usePathname();
+  return <>{pathname === "/team" ? null : <FooterContent />}</>;
 }

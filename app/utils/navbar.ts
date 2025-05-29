@@ -8,5 +8,5 @@ export const navbarItems: NavbarItem[] = [
     { name: "Tentang Kami", href: "/#tentangkami" },
     { name: "Layanan", href: "/layanan" },
     { name: "Keunggulan", href: "/keunggulan" },
-    { name: "Kontak", href: "#Kontak" },
+    { name: "Kontak", href: "/#Kontak" },
 ];
