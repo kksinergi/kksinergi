@@ -47,7 +47,9 @@ export default function Navbar() {
             <Link
               href={item.href}
               onClick={handleNavbarItemClick.bind(null, item.name)}
-              className={`flex items-center  text-sm font-light sm:text-base md:text-lg text-[#969696] group-hover:text-black w-full h-full ${activeNavbarItem === item.name ? "group-focus-within:text-black group-focus-within:font-semibold" : ""}`}
+              className={`flex items-center  text-sm font-light sm:text-base md:text-lg text-[#969696] group-hover:text-black w-full h-full ${
+                activeNavbarItem === item.name ? "group-focus-within:text-black group-focus-within:font-semibold" : ""
+              }`}
             >
               {item.name}
             </Link>
@@ -68,7 +70,7 @@ export default function Navbar() {
           <ul className="flex flex-col justify-center items-center space-y-4 py-6">
             {navbarItems.map((item) => (
               <li key={item.name} className="w-full text-center group">
-                <Link href={item.href} className="block text-sm font-light sm:text-base md:text-lg text-[#969696] group-hover:text-black transition-colors duration-200 py-2" onClick={handleToggle}>
+                <Link href={item.href} className={`block text-sm font-light sm:text-base md:text-lg text-[#969696] group-hover:text-black transition-colors duration-200 py-2`} onClick={handleToggle}>
                   {item.name}
                 </Link>
               </li>

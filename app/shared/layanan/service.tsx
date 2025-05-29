@@ -22,13 +22,13 @@ export default function LayananSection() {
             <div className="flex flex-col w-full h-fit gap-4">
               <h3 className="text-base sm:text-2xl text-center sm:text-left font-bold">{item.title}</h3>
               <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{item.description}</p>
-              <div className="flex flex-col w-full h-fit gap-3">
+              <div className="flex flex-col w-full h-fit gap-5 sm:gap-3">
                 {item.status?.map((status, index) => (
-                  <div key={index} className="flex flex-col md:flex-row items-center gap-3">
+                  <div key={index} className="flex items-start gap-3">
                     <div className="min-w-[20px] sm:min-w-[24px] h-auto aspect-square flex items-center justify-center">
                       <div className="w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${item.checked})` }}></div>
                     </div>
-                    <p className="text-center sm:text-left text-(--color-description) text-sm sm:text-xl align-center">{status}</p>
+                    <p className="text-left text-(--color-description) text-sm sm:text-xl align-center">{status}</p>
                   </div>
                 ))}
               </div>
