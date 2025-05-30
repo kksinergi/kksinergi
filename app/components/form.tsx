@@ -36,6 +36,12 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
       return;
     }
 
+    const today = new Date().toISOString().split("T")[0];
+    if (tanggal < today) {
+      alert("Tanggal tidak boleh di masa lalu!");
+      return;
+    }
+
     // Reset form setelah submit
     setFormData({
       name: "",
