@@ -5,15 +5,19 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { navbarItems } from "@/app/utils/navbar";
-
+import Form from "@/app/components/form";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeNavbarItem, setActiveNavbarItem] = useState<string | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleNavbarItemClick = (item: string) => {
     setActiveNavbarItem(item);
     setIsOpen(false);
+  };
+  const toggleForm = () => {
+    setIsFormOpen(!isFormOpen);
   };
 
   const handleToggle = () => {
@@ -21,8 +25,10 @@ export default function Navbar() {
   };
 
   const toggleRef = useRef<HTMLDivElement>(null);
-
+  const formRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       if (toggleRef.current && !toggleRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -33,7 +39,22 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [isOpen]); // hanya aktif ketika isOpen true
+
+  useEffect(() => {
+    if (!isFormOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (formRef.current && !formRef.current.contains(event.target as Node)) {
+        setIsFormOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isFormOpen]); // hanya aktif ketika isFormOpen true
 
   return (
     <nav className="flex items-center bg-white justify-between py-4 px-8 text-black">
@@ -55,9 +76,9 @@ export default function Navbar() {
           </li>
         ))}
         <li className="group px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-[20px] text-white ml-8">
-          <Link href="/jadwal" className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
+          <button className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl cursor-pointer" onClick={toggleForm}>
             Buat Jadwal
-          </Link>
+          </button>
         </li>
       </ul>
 
@@ -75,11 +96,16 @@ export default function Navbar() {
               </li>
             ))}
             <li className="w-full flex justify-center">
-              <Link href="/jadwal" className="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-[20px] text-white text-sm font-semibold sm:text-base md:text-lg lg:text-xl transition-colors duration-200" onClick={handleToggle}>
+              <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-[20px] text-white text-sm font-semibold sm:text-base md:text-lg lg:text-xl transition-colors duration-200 cursor-pointer" onClick={toggleForm}>
                 Buat Jadwal
-              </Link>
+              </button>
             </li>
           </ul>
+        </div>
+      )}
+      {isFormOpen && (
+        <div className="fixed inset-0 w-full h-full flex items-center justify-center z-50 bg-sky-700/60 backdrop-blur-sm" ref={formRef}>
+          <Form toggleForm={toggleForm} />
         </div>
       )}
     </nav>
