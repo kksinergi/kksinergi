@@ -104,8 +104,10 @@ export default function Navbar() {
         </div>
       )}
       {isFormOpen && (
-        <div className="fixed inset-0 w-full h-full flex items-center justify-center z-50 bg-sky-700/60 backdrop-blur-sm" ref={formRef}>
-          <Form toggleForm={toggleForm} />
+        <div className="fixed inset-0 w-full h-full flex items-center justify-center z-50 bg-sky-700/60 backdrop-blur-sm">
+          <div ref={formRef} className="w-full max-w-md bg-black mx-auto rounded-[20px] overflow-hidden">
+            <Form toggleForm={toggleForm} />
+          </div>
         </div>
       )}
     </nav>

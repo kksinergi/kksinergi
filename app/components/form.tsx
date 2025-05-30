@@ -49,7 +49,7 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-lg mx-auto bg-white p-6 font-[family-name:var(--font-geist-sans)] rounded-[20px] gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-lg mx-auto bg-white p-6 font-[family-name:var(--font-geist-sans)] gap-4">
       <div className="flex justify-between">
         <h1 className="text-2xl font-bold">Buat Jadwal</h1>
         <button type="button" aria-label="Tutup Formulir" onClick={toggleForm}>
