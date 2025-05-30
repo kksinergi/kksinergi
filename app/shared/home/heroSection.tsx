@@ -1,8 +1,31 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import Form from "@/app/components/form";
 
 export default function HeroSection() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const toggleForm = () => {
+    setIsFormOpen(!isFormOpen);
+  };
+
+  const formRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!isFormOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (formRef.current && !formRef.current.contains(event.target as Node)) {
+        setIsFormOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isFormOpen]);
   return (
     <section id="home" className={`font-[family-name:var(--font-geist-sans)]`}>
       <div className="flex flex-col gap-10 items-center justify-center bg-cover bg-center py-32 sm:py-36 xl:py-40 px-8" style={{ backgroundImage: "url('/hero-bg.png')" }}>
@@ -21,8 +44,12 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="flex flex-col sm:w-full sm:flex-row sm:justify-center gap-10">
-              <button className="px-6 py-4 text-center bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px]">Konsultasi Sekarang</button>
-              <Link href="#layanan" className="px-6 py-4 text-center bg-transparent text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer underline text-[14px] xl:text-[20px]">Lihat Layanan Kami</Link>
+              <button className="px-6 py-4 text-center bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px]" onClick={toggleForm}>
+                Konsultasi Sekarang
+              </button>
+              <Link href="#layanan" className="px-6 py-4 text-center bg-transparent text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer underline text-[14px] xl:text-[20px]">
+                Lihat Layanan Kami
+              </Link>
             </div>
           </div>
           <div className="flex flex-col items-center lg:items-end justify-center w-full">
@@ -33,6 +60,13 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      {isFormOpen && (
+        <div className="fixed inset-0 w-full h-full flex items-center justify-center z-50 bg-sky-700/60 backdrop-blur-sm">
+          <div ref={formRef} className="w-full max-w-md bg-black mx-auto rounded-[20px] overflow-hidden">
+            <Form toggleForm={toggleForm} />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

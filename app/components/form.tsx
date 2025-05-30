@@ -1,13 +1,14 @@
 "use client";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useState } from "react";
+import { sendMessage } from "@/app/utils/submitSchedule";
 
 export default function Form({ toggleForm }: { toggleForm: () => void }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    tanggal: new Date().toISOString().split("T")[0],
-    pesan: "",
+    date: new Date().toISOString().split("T")[0],
+    message: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,9 +25,9 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { name, email, tanggal, pesan } = formData;
+    const { name, email, date, message } = formData;
 
-    if (!name || !email || !tanggal || !pesan) {
+    if (!name || !email || !date || !message) {
       alert("Semua field wajib diisi!");
       return;
     }
@@ -37,7 +38,7 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
     }
 
     const today = new Date().toISOString().split("T")[0];
-    if (tanggal < today) {
+    if (date < today) {
       alert("Tanggal tidak boleh di masa lalu!");
       return;
     }
@@ -46,9 +47,12 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
     setFormData({
       name: "",
       email: "",
-      tanggal: new Date().toISOString().split("T")[0],
-      pesan: "",
+      date: new Date().toISOString().split("T")[0],
+      message: "",
     });
+
+    // Kirim pesan ke WhatsApp
+    sendMessage(formData);
 
     // Tutup form jika diinginkan
     toggleForm();
@@ -100,7 +104,7 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
         <input
           id="tanggal"
           type="date"
-          value={formData.tanggal}
+          value={formData.date}
           onChange={handleChange}
           min={new Date().toISOString().split("T")[0]}
           required
@@ -109,12 +113,12 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
       </div>
 
       <div>
-        <label htmlFor="pesan" className="block text-gray-700 font-bold mb-2">
+        <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
           Pesan
         </label>
         <textarea
-          id="pesan"
-          value={formData.pesan}
+          id="message"
+          value={formData.message}
           onChange={handleChange}
           required
           placeholder="Pesan"
