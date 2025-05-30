@@ -5,7 +5,7 @@ interface FormData {
   message: string;
 }
 
-const ENDPOINT = "https://web.whatsapp.com/send/?phone=628213123456";
+const ENDPOINT = "https://api.whatsapp.com/send/?phone=628213123456";
 
 const sendMessage = async (formData: FormData) => {
   try {
@@ -23,7 +23,7 @@ const sendMessage = async (formData: FormData) => {
 
     // Buka link WhatsApp
     const url = `${ENDPOINT_WA}&text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
+    window.open(url, "/");
   } catch (error) {
     console.error("Gagal kirim pesan:", error);
     throw error;
