@@ -148,7 +148,7 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
         <button
           type="button"
           onClick={handleSubmitWhatsApp}
-          className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300 transition"
+          className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300 transition cursor-pointer"
         >
           <WhatsAppIcon />
           Kirim via WA
@@ -157,7 +157,7 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
         <button
           type="button"
           onClick={handleSubmitEmail}
-          className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+          className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition cursor-pointer"
         >
           <EmailRoundedIcon />
           Kirim via Email

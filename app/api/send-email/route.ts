@@ -6,7 +6,11 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const { name, email, date, message } = await req.json();
-    const htmlContent = await render(BookingEmail({ name, email, date, message }));
+
+    const [year, month, day] = date.split("-");
+    const formattedDate = `${day}-${month}-${year}`;
+
+    const htmlContent = await render(BookingEmail({ name, email, date: formattedDate, message }));
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
