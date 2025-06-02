@@ -2,6 +2,8 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useState } from "react";
 import { sendMessage } from "@/app/utils/submitSchedule";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 
 export default function Form({ toggleForm }: { toggleForm: () => void }) {
   const [formData, setFormData] = useState({
@@ -22,44 +24,60 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
     return regex.test(email);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmitWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validateForm()) return;
 
+    sendMessage(formData); // buka WhatsApp
+    toggleForm(); // tutup form
+  };
+
+  const handleSubmitEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Gagal kirim email!");
+
+      alert("Email berhasil dikirim!");
+      toggleForm(); // tutup form
+    } catch (error) {
+      console.error("Error kirim email:", error);
+      alert("Terjadi kesalahan saat mengirim email.");
+    }
+  };
+
+  const validateForm = () => {
     const { name, email, date, message } = formData;
 
     if (!name || !email || !date || !message) {
       alert("Semua field wajib diisi!");
-      return;
+      return false;
     }
 
     if (!isValidEmail(email)) {
       alert("Format email tidak valid!");
-      return;
+      return false;
     }
 
     const today = new Date().toISOString().split("T")[0];
     if (date < today) {
       alert("Tanggal tidak boleh di masa lalu!");
-      return;
+      return false;
     }
 
-    // Reset form setelah submit
-    setFormData({
-      name: "",
-      email: "",
-      date: new Date().toISOString().split("T")[0],
-      message: "",
-    });
-
-    // Kirim pesan ke WhatsApp
-    sendMessage(formData);
-
-    // Tutup form jika diinginkan
-    toggleForm();
+    return true;
   };
 
+
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-lg mx-auto bg-white p-6 font-[family-name:var(--font-geist-sans)] gap-4">
+    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-full max-w-lg mx-auto bg-white p-6 font-[family-name:var(--font-geist-sans)] gap-4">
       <div className="flex justify-between">
         <h1 className="text-2xl font-bold">Buat Jadwal</h1>
         <button type="button" aria-label="Tutup Formulir" onClick={toggleForm}>
@@ -126,9 +144,25 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
         />
       </div>
 
-      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer">
-        Kirim
-      </button>
+      <div className="flex flex-col sm:flex-row gap-4 items-center">
+        <button
+          type="button"
+          onClick={handleSubmitWhatsApp}
+          className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300 transition"
+        >
+          <WhatsAppIcon />
+          Kirim via WA
+        </button>
+
+        <button
+          type="button"
+          onClick={handleSubmitEmail}
+          className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+        >
+          <EmailRoundedIcon />
+          Kirim via Email
+        </button>
+      </div>
     </form>
   );
 }
