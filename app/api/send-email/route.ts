@@ -13,7 +13,9 @@ export async function POST(req: Request) {
     const htmlContent = await render(BookingEmail({ name, email, date: formattedDate, message }));
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.SMTP_EMAIL,
         pass: process.env.SMTP_PASS,
