@@ -7,7 +7,7 @@ interface FormData {
 
 const sendMessage = async (formData: FormData) => {
   try {
-    const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=628213123456";
+    const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=6281234165659";
 
     // Format tanggal ke DD-MM-YYYY
     const [year, month, day] = formData.date.split("-");
