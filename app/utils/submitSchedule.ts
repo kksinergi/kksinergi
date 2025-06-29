@@ -4,7 +4,6 @@ interface FormData {
   date: string;
   message: string;
 }
-
 const sendMessage = async (formData: FormData) => {
   try {
     const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=6281234165659"; 
