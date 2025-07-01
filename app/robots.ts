@@ -20,6 +20,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/", // Dilarang total
       },
     ],
-    sitemap: "https://kapita-konsul-sinergi.vercel.app/sitemap.xml",
+    sitemap: "https://www.kksinergi.com/sitemap.xml",
   };
 }
