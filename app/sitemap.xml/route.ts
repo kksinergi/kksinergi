@@ -1,7 +1,6 @@
 // app/sitemap.xml/route.ts
-import { type NextRequest } from "next/server";
 
-export async function GET(_request: NextRequest): Promise<Response> {
+export async function GET(): Promise<Response> {
     const baseUrl = "https://www.kksinergi.com";
 
     const urls = [
