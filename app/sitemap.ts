@@ -1,7 +1,9 @@
+// app/sitemap.ts
+
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.kksinergi.com/";
+  const baseUrl = "https://www.kksinergi.com";
 
   return [
     {
@@ -22,6 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    // Tambah rute lain kalau perlu
+    // Tambah jika ada
   ];
 }
