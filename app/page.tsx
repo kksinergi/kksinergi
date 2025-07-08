@@ -1,10 +1,10 @@
-'use client';
 import dynamic from "next/dynamic";
 
-const HeroSection = dynamic(() => import("@/app/shared/home/heroSection"))
-const AboutUsSection = dynamic(() => import("@/app/shared/home/aboutUsSection"))
-const ServiceSection = dynamic(() => import("@/app/shared/home/serviceSection"))
-const WhyMeSection = dynamic(() => import("@/app/shared/home/whyMe"))
+const HeroSection = dynamic(() => import("@/app/shared/home/heroSection"), { ssr: true });
+const AboutUsSection = dynamic(() => import("@/app/shared/home/aboutUsSection"), { ssr: true });
+const ServiceSection = dynamic(() => import("@/app/shared/home/serviceSection"), { ssr: true });
+const WhyMeSection = dynamic(() => import("@/app/shared/home/whyMe"), { ssr: true });
+const SOT = dynamic(() => import("@/app/components/scrollOnTop"), { ssr: true });
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <AboutUsSection />
       <ServiceSection />
       <WhyMeSection />
+      <SOT />
     </main>
   );
 }
