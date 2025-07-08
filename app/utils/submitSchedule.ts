@@ -7,7 +7,7 @@ interface FormData {
 
 const sendMessage = async (formData: FormData) => {
   try {
-    const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=6281234165659";
+    const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.WA_NUMBER}`;
     const [year, month, day] = formData.date.split("-");
     const formattedName = formData.name.charAt(0).toUpperCase() + formData.name.slice(1);
     const formattedDate = `${day}-${month}-${year}`;
@@ -22,7 +22,7 @@ const sendMessage = async (formData: FormData) => {
 };
 
 const sendMessageTemplate = () => {
-  const url = `https://api.whatsapp.com/send?phone=6281234165659&text=${encodeURIComponent(
+  const url = `https://api.whatsapp.com/send?phone=${process.env.WA_NUMBER}&text=${encodeURIComponent(
     "Halo Kak, saya ingin konsultasi dengan PT. Kapita Konsul Sinergi. Bisa dibantu ya? 😊"
   )}`;
   window.open(url, "_blank");
