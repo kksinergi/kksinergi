@@ -4,27 +4,28 @@ interface FormData {
   date: string;
   message: string;
 }
+
 const sendMessage = async (formData: FormData) => {
   try {
-    const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=6281234165659"; 
-
-    // Format tanggal ke DD-MM-YYYY
+    const ENDPOINT_WA = "https://api.whatsapp.com/send/?phone=6281234165659";
     const [year, month, day] = formData.date.split("-");
-
-    // Capitalize nama
     const formattedName = formData.name.charAt(0).toUpperCase() + formData.name.slice(1);
     const formattedDate = `${day}-${month}-${year}`;
 
-    // Buat isi pesan WhatsApp
     const message = `Mau konsultasi dong kak,\n\nNama: *${formattedName}*\nEmail: *${formData.email}*\nJadwal: *${formattedDate}*\nPesan: ${formData.message}`;
-
-    // Buka link WhatsApp
     const url = `${ENDPOINT_WA}&text=${encodeURIComponent(message)}`;
-    window.open(url, "/");
+    window.open(url, "_blank");
   } catch (error) {
     console.error("Gagal kirim pesan:", error);
     throw error;
   }
 };
 
-export { sendMessage };
+const sendMessageTemplate = () => {
+  const url = `https://api.whatsapp.com/send?phone=6281234165659&text=${encodeURIComponent(
+    "Halo Kak, saya ingin konsultasi dengan PT. Kapita Konsul Sinergi. Bisa dibantu ya? 😊"
+  )}`;
+  window.open(url, "_blank");
+};
+
+export { sendMessage, sendMessageTemplate };

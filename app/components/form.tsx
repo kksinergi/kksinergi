@@ -28,8 +28,8 @@ export default function Form({ toggleForm }: { toggleForm: () => void }) {
     e.preventDefault();
     if (!validateForm()) return;
 
-    sendMessage(formData); // buka WhatsApp
-    toggleForm(); // tutup form
+    sendMessage(formData);
+    toggleForm();
   };
 
   const handleSubmitEmail = async (e: React.FormEvent) => {
