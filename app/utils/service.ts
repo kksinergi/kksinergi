@@ -9,17 +9,17 @@ interface serviceItem {
 export const serviceHomeItems: serviceItem[] = [
   {
     title: "KONSULTAN ISO",
-    description: "Membantu penerapan dan sertifikasi ISO untuk memastikan kepatuhan standar, efisiensi, dan kepercayaan pelanggan.",
+    description: "Membantu penerapan dan proses sertifikasi ISO untuk memastikan kepatuhan standar, efisiensi, dan kepercayaan pelanggan.",
     icon: "/badge3.1.png",
   },
   {
     title: "KONSULTAN LINGKUNGAN",
-    description: "Pendampingan PROPER, dokumen lingkungan, dan strategi keberlanjutan untuk pengelolaan lingkungan.",
+    description: "Membantu pendampingan Proper, dokumen lingkungan, dekarbonisasi, dan strategi keberlanjutan untuk pengelolaan lingkungan.",
     icon: "/badge3.2.png",
   },
   {
     title: "KONSULTAN K3",
-    description: "Membantu pendampingan pada proses mendapatkan sertifikat terkait K3 seperti sertifikat SMK3, ISO 45001, dll.",
+    description: "Membantu pendampingan pada proses mendapatkan sertifikat terkait K3 seperti sertifikat SMK3 dan ISO 45001.",
     icon: "/badge3.3.png",
   },
   {
@@ -38,7 +38,7 @@ export const servicePageItems: serviceItem[] = [
   {
     title: "KONSULTAN ISO",
     description:
-      "Membantu penerapan dan sertifikasi ISO untuk memastikan kepatuhan standar, efisiensi, dan kepercayaan pelanggan. Membantu penerapan dan sertifikasi ISO untuk memastikan kepatuhan standar, efisiensi, dan kepercayaan pelanggan.Kami menyediakan sertifikasi ISO dalam bidang-bidang berikut:",
+      "Membantu penerapan dan proses sertifikasi ISO untuk memastikan kepatuhan standar, efisiensi, dan kepercayaan pelanggan. Kami menyediakan proses sertifikasi ISO dalam bidang-bidang berikut:",
     icon: "/service1.1.png",
     checked: "service-check.png",
     status: [
@@ -51,25 +51,26 @@ export const servicePageItems: serviceItem[] = [
   },
   {
     title: "KONSULTAN LINGKUNGAN",
-    description: "Pendampingan PROPER, dokumen lingkungan, dan strategi keberlanjutan untuk pengelolaan lingkungan.",
+    description: "Membantu perusahaan dalam memenuhi regulasi, mengelola dampak lingkungan secara bertanggung jawab, serta membangun citra perusahaan yang peduli terhadap kelestarian lingkungan. Kami menyediakan layanan konsultasi lingkungan yang mencakup: ",
     icon: "/service1.2.png",
     checked: "service-check.png",
     status: [
-      "PROPER (Program Penilaian Peringkat Kinerja Perusahaan dalam Pengelolaan Lingkungan Hidup)",
+      "Proper (Program Penilaian Peringkat Kinerja Perusahaan dalam Pengelolaan Lingkungan Hidup)",
       "Perizinan Lingkungan (AMDAL, UKL-UPL, Pertek, Rintek)",
       "SGS’s, layanan atau pendekatan berbasis standar SGS",
-      "MACC (Marginal Abatement Cost Curve)",
+      "Inventarisasi Emisi Gas Rumah Kaca (GRK)",
       "Roadmap Dekarbonisasi",
       "Dokumen Rencana Aksi Mitigasi (DRAM)",
       "Laporan Capain Aksi Mitigasi (LCAM)",
       "Pendampingan Sistem Registri Nasional (SRN)",
       "Life Cycle Assessment (LCA)",
       "Green Building",
+      "Sustainability Report (SR)",
     ],
   },
   {
     title: "KONSULTAN K3",
-    description: "Membantu pendampingan pada proses mendapatkan sertifikat terkait K3 seperti sertifikat SMK3, ISO 45001, dll.",
+    description: "Kami menyediakan layanan konsultasi dan pendampingan dalam penerapan Sistem Manajemen Kesehatan dan Keselamatan Kerja (K3) untuk mendukung terciptanya lingkungan kerja yang aman, produktif, dan sesuai regulasi. Layanan ini mencakup:",
     icon: "/service1.3.png",
     checked: "service-check.png",
     status: [
@@ -86,7 +87,7 @@ export const servicePageItems: serviceItem[] = [
   },
   {
     title: "KONSULTAN ENGINEERING",
-    description: "Membantu penerbitan sertifikat peralatan dan bangunan untuk memastikan kepatuhan terhadap regulasi dan standar keselamatan.",
+    description: "Kami memberikan layanan konsultasi teknik untuk mendukung penerbitan proses sertifikasi peralatan dan bangunan sesuai regulasi dan standar keselamatan yang berlaku. Layanan ini penting untuk menunjang operasional yang aman, efisien, dan bebas dari risiko hukum. Layanan ini mencakup:",
     icon: "/service1.4.png",
     checked: "service-check.png",
     status: [
@@ -102,7 +103,7 @@ export const servicePageItems: serviceItem[] = [
   },
   {
     title: "TRAINING AWARENESS",
-    description: "Memberikan training terkait teknik, K3 maupun lingkungan, guna meningkatkan pemahaman & kepatuhan terhadap regulasi.",
+    description: "Kami menyediakan program training awareness yang dirancang untuk meningkatkan pemahaman karyawan terhadap aspek teknis, K3 (Keselamatan dan Kesehatan Kerja), serta lingkungan. Guna mendukung kepatuhan regulasi serta terciptanya budaya kerja yang aman. Layanan ini mencakup:",
     icon: "/service1.5.png",
     checked: "service-check.png",
     status: [

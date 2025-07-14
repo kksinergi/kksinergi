@@ -16,8 +16,8 @@ export default function AboutUsSection() {
             <div className="flex flex-col items-start justify-start w-full h-full gap-5">
               <h1 className="font-semibold text-center lg:text-left text-[32px] sm:text-4xl md:text-5xl lg:text-6xl">Mitra Konsultasi Professional Anda</h1>
               <p className="text-center lg:text-left text-(--color-description) text-sm sm:text-xl align-center lg:text-2xl">
-                Kapita Konsul Sinergi adalah perusahaan konsultasi yang memberikan solusi strategis di bidang Teknik, K3, dan Lingkungan. Dengan tim ahli berpengalaman, kami membantu bisnis memperoleh sertifikasi dan mengoptimalkan
-                operasional secara berkelanjutan.
+                Kapita Konsul Sinergi adalah perusahaan konsultasi yang memberikan solusi strategis di bidang Teknik, K3, dan Lingkungan. Dengan tim ahli berpengalaman, kami membantu bisnis dalam proses memperoleh sertifikasi dan
+                mengoptimalkan operasional secara berkelanjutan.
               </p>
             </div>
           </div>
