@@ -6,7 +6,7 @@ import Form from "@/app/components/form";
 
 export default function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
- 
+
   const toggleForm = () => {
     setIsFormOpen(!isFormOpen);
   };

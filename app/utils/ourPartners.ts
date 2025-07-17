@@ -2,7 +2,7 @@ interface partnersItem {
     image: string;
     title: string;
     description: string;
-}
+} 
 
 export const ourPartnersItems: partnersItem[] = [
     {
