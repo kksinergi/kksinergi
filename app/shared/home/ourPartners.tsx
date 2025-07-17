@@ -16,7 +16,7 @@ export default function OurPartners() {
         {/* Grid Partner */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
           {ourPartnersItems.map((item, index) => (
-            <div key={index} className="flex flex-col gap-4 p-6 items-center text-left rounded-2xl bg-[#F7FAFF] border border-[#D4D4D4]">
+            <div key={index} className="flex flex-col gap-4 p-6  rounded-2xl bg-[#F7FAFF] border border-[#D4D4D4]">
               <div className="aspect-square w-full rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${item.image})` }} />
               </div>

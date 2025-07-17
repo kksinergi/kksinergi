@@ -43,7 +43,7 @@ export default function HeroSection() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:w-full sm:flex-row sm:justify-center gap-10">
+            <div className="flex flex-col sm:w-full sm:flex-row sm:justify-start gap-10">
               <button className="px-6 py-4 text-center bg-(--color-secondary) text-(--color-buttonSecondary) rounded-[20px] font-semibold cursor-pointer text-[16px] sm:text-[20px]" onClick={toggleForm}>
                 Konsultasi Sekarang
               </button>

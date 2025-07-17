@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function WhyMeSection() {
   return (
     <section id="keunggulan" className="font-[family-name:var(--font-geist-sans)]">
-      <div className=" flex flex-col items-center justify-center px-8 py-32 gap-10 h-full">
+      <div className=" flex flex-col items-center justify-center px-8 py-32 gap-10 h-full bg-[#F7FAFF]">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
           <div className="flex flex-col h-full gap-3">
             <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
