@@ -19,7 +19,7 @@ export default function AboutUsSection() {
                 Kapita Konsul Sinergi adalah perusahaan konsultasi yang memberikan solusi strategis di bidang Teknik, K3, dan Lingkungan. Dengan tim ahli berpengalaman, kami membantu bisnis dalam proses memperoleh sertifikasi dan
                 mengoptimalkan operasional secara berkelanjutan.
               </p>
-            </div>
+            </div> 
           </div>
         </div>
         <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full gap-10">

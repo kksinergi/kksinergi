@@ -12,7 +12,7 @@ export default function WhyMeSection() {
             <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
               <div className="w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px] bg-cover bg-center" style={{ backgroundImage: "url('/badge4.png')" }}></div>
               <h4 className="font-semibold text-sm sm:text-2xl text-(--color-primary)">Kenapa Memilih Kami?</h4>
-            </div>
+            </div> 
             <div className="flex flex-col gap-10">
               <h1 className="font-bold text-center lg:text-left text-[32px] sm:text-4xl md:text-5xl lg:text-6xl">Kami Hadir dengan Solusi Inovatif dan Konsultasi Terpercaya</h1>
               <div className="flex flex-col gap-6">

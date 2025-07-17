@@ -13,7 +13,7 @@ export default function TeamSection() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-full h-full">
-          <div className="w-full aspect-video bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/struktur-tim.png')" }}></div>
+          <div className="w-full aspect-video bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('/tim-struktur.png')" }}></div>
         </div>
       </div>
     </section>
