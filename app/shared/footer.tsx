@@ -30,7 +30,7 @@ function FooterContent() {
     };
   }, [isFormOpen]);
   return (
-    <footer id="Kontak" className="mb-[87px] font-[family-name:var(--font-geist-sans)] overflow-hidden">
+    <footer id="kontak" className="mb-[87px] font-[family-name:var(--font-geist-sans)] overflow-hidden">
       {pathname === "/layanan" ? (
         <div className="flex items-center justify-between bg-transparent text-white max-h-[436px] bg-cover bg-center" style={{ backgroundImage: "url('/service-footer-img.png')" }}>
           <div className="block bg-linear-to-r from-[#0443AC] via-[#0443AC] to-[#0443AC]/20 w-full h-full">
