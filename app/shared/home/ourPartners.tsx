@@ -2,7 +2,7 @@ import { ourPartnersItems } from "@/app/utils/ourPartners";
 
 export default function OurPartners() {
   return (
-    <section className="font-[var(--font-geist-sans)] bg-white px-4 sm:px-8 py-24 sm:py-32 lg:py-40" id="mitra-kami">
+    <section id="mitra-kami" className="font-[var(--font-geist-sans)] bg-white px-4 sm:px-8 py-24 sm:py-32 lg:py-40">
       <div className="max-w-7xl mx-auto flex flex-col gap-16 items-center">
         {/* Judul Section */}
         <div className="flex flex-col gap-4 items-center text-center px-4">
@@ -13,7 +13,7 @@ export default function OurPartners() {
           <h1 className="font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl max-w-3xl">Menjalin Sinergi Untuk Tujuan Bersama</h1>
         </div>
 
-        {/* Grid Partner */} 
+        {/* Grid Partner */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
           {ourPartnersItems.map((item, index) => (
             <div key={index} className="flex flex-col gap-4 p-6  rounded-2xl bg-[#F7FAFF] border border-[#D4D4D4]">
