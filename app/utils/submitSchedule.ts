@@ -7,7 +7,7 @@ interface FormData {
 
 const sendMessage = async (formData: FormData) => {
   try {
-    const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.WA_NUMBER}`;
+    const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.NEXT_PUBLIC_WA_NUMBER}`;
     const [year, month, day] = formData.date.split("-");
     const formattedName = formData.name.charAt(0).toUpperCase() + formData.name.slice(1);
     const formattedDate = `${day}-${month}-${year}`;
