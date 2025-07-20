@@ -5,8 +5,6 @@ interface FormData {
   message: string;
 }
 
-const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.NEXT_PUBLIC_WA_NUMBER}`;
-
 const sendMessage = async (formData: FormData) => {
   try {
     const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.WA_NUMBER}`;
