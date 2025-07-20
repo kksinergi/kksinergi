@@ -5,6 +5,8 @@ interface FormData {
   message: string;
 }
 
+const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.NEXT_PUBLIC_WA_NUMBER}`;
+
 const sendMessage = async (formData: FormData) => {
   try {
     const ENDPOINT_WA = `https://api.whatsapp.com/send/?phone=${process.env.WA_NUMBER}`;
@@ -21,8 +23,9 @@ const sendMessage = async (formData: FormData) => {
   }
 };
 
+
 const sendMessageTemplate = () => {
-  const url = `https://api.whatsapp.com/send?phone=${process.env.WA_NUMBER}&text=${encodeURIComponent(
+  const url = `https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WA_NUMBER}&text=${encodeURIComponent(
     "Halo Kak, saya ingin konsultasi dengan PT. Kapita Konsul Sinergi. Bisa dibantu ya? 😊"
   )}`;
   window.open(url, "_blank");
